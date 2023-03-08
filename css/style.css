@@ -1,0 +1,313 @@
+@import url(https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700&display=swap);
+:root {
+  --text-color: #667085;
+  --main-color: #8e2424;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Inter, sans-serif;
+}
+body {
+  width: 100%;
+  height: 100vw;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1rem 0;
+}
+.logo {
+  display: block;
+  position: relative;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-color);
+}
+.logo::before {
+  content: "";
+  display: block;
+  background: url("../img/logo.svg") no-repeat center;
+  width: 27px;
+  height: 28px;
+  position: absolute;
+  top: -4px;
+  left: -36px;
+}
+.links {
+  display: flex;
+}
+.links a {
+  color: var(--text-color);
+  margin-right: 2rem;
+}
+button {
+  padding: 0.8rem 1rem;
+  cursor: pointer;
+  border: none;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  color: var(--text-color);
+  font-size: 0.9rem;
+}
+button#signUp {
+  background-color: var(--main-color);
+  color: #fff;
+}
+@media (max-width: 800px) {
+  nav {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    justify-content: center;
+    gap: 30px;
+  }
+  .buttons {
+    grid-area: 1/2;
+  }
+  .links {
+    grid-column: 1/-1;
+  }
+  .ivi {
+    display: none;
+  }
+}
+@media (max-width: 400px) {
+  nav {
+    justify-content: center;
+    justify-items: center;
+  }
+  button {
+    font-size: 0.7rem;
+  }
+}
+.introducao {
+  padding: 7rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+.introducao span {
+  font-weight: 700;
+  color: var(--main-color);
+}
+.introducao h1 {
+  font-size: 2.5rem;
+}
+.introducao p {
+  color: var(--text-color);
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+  max-width: 60%;
+  text-align: center;
+}
+.conteudo {
+  display: flex;
+}
+.conteudo ul {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 40px;
+}
+.conteudo span {
+  font-size: 4rem;
+  font-weight: 600;
+  color: var(--main-color);
+}
+.conteudo p {
+  color: var(--text-color);
+  padding-top: 10px;
+  line-height: 1.4;
+}
+@media (max-width: 800px) {
+  .introducao {
+    padding: 2em;
+    text-align: center;
+    align-items: center;
+  }
+  .introducao h1 {
+    font-size: 2rem;
+  }
+  .introducao p {
+    font-size: 1rem;
+  }
+  .conteudo {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+  }
+  .conteudo span {
+    font-size: 3rem;
+  }
+}
+.vagas {
+  padding: 7rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+.vagas span {
+  color: var(--main-color);
+  background: rgba(142, 36, 36, 0.05);
+  border-radius: 16px;
+  padding: 5px 10px;
+  font-weight: 500;
+}
+.vagas h2 {
+  font-size: 2rem;
+}
+.vagas p {
+  font-size: 1.2rem;
+  color: var(--text-color);
+  margin-top: -10px;
+  margin-bottom: 30px;
+}
+.vagas img {
+  border-radius: 3px;
+}
+.vagas-conteiner {
+  display: flex;
+  flex-direction: column;
+  max-width: 800px;
+  margin: 0 auto;
+  gap: 3rem;
+}
+.vagas-lista {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.vagas-item {
+  border: 1px solid #eaecf0;
+  border-radius: 16px;
+  padding: 24px 28px;
+}
+.vagas-conteiner h3 {
+  font-size: 1.4rem;
+}
+.vagas-conteiner h4 {
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+  font-weight: 500;
+}
+.vagas-conteiner span {
+  color: var(--text-color);
+  margin-right: 20px;
+}
+.artigo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  background: rgba(196, 25, 25, 0.03);
+  border-radius: 16px;
+  margin: 7rem;
+  padding: 4rem 0;
+}
+.artigo .texto {
+  font-weight: 500;
+  color: var(--main-color);
+}
+.artigo h4 {
+  font-size: 2rem;
+  font-weight: 500;
+  text-align: center;
+  max-width: 80%;
+}
+.artigo p {
+  color: var(--text-color);
+  margin: -20px;
+}
+@media (max-width: 800px) {
+  .vagas {
+    padding: 2em;
+    text-align: center;
+    align-items: center;
+  }
+  .vagas h1 {
+    font-size: 2rem;
+  }
+  .vagas p {
+    font-size: 1rem;
+  }
+  .vagas img {
+    max-width: 100%;
+  }
+  .vagas-conteiner {
+    gap: 2rem;
+  }
+  .vagas-lista {
+    gap: 20px;
+  }
+  .artigo {
+    margin: 2rem;
+  }
+  .artigo h4 {
+    font-size: 1.2rem;
+  }
+  .artigo .texto {
+    text-align: center;
+    max-width: 80%;
+  }
+}
+@media (max-width: 400px) {
+  .vagas img {
+    display: none;
+  }
+}
+.rodape {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+  background: #f9fafb;
+  padding: 5rem;
+}
+.rodape h2 {
+  font-size: 2rem;
+}
+.rodape p {
+  color: var(--text-color);
+}
+.rodape button {
+  padding: 0.8rem 1rem;
+  cursor: pointer;
+  border: none;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  color: #fff;
+  background: var(--main-color);
+  font-size: 0.9rem;
+}
+.rodape input {
+  background: #fff;
+  border: 1px solid #d0d5dd;
+  box-shadow: 0 1px 2px rgba(16, 24, 40, 0.05);
+  border-radius: 8px;
+  padding: 0.8rem;
+  width: 280px;
+  margin: 5px;
+}
+@media (max-width: 800px) {
+  .rodape {
+    padding: 2em;
+    text-align: center;
+    align-items: center;
+    gap: 1.5rem;
+  }
+  .rodape input {
+    margin: 10px;
+  }
+}
